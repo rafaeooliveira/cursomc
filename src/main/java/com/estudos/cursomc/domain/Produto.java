@@ -1,5 +1,7 @@
 package com.estudos.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -55,6 +57,7 @@ public class Produto implements Serializable {
         this.preco = preco;
     }
 
+    @JsonBackReference
     public List<Categoria> getCategorias() {
         return categorias;
     }
